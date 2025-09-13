@@ -263,7 +263,7 @@ header a {
     position: absolute;
     bottom: 0;
     left: 0;
-    animation: outImage .5s linear;
+    animation: outImage 0.5s linear 1 forwards;
 }
 
 @keyframes outImage {
@@ -276,18 +276,18 @@ header a {
     }
 }
 
-.carrossel.prev .lista .item:nth-child(1) {
+.carrossel.prev .thumbnail .item:nth-child(1) {
     width: 0;
     overflow: hidden;
     opacity: 0;
-    animation: showThumbnail .5s linear 1 forwards;
+    animation: showThumbnail 0.5s linear 1 forwards;
 }
 
-.carrossel .lista .item:nth-child(2) .lumini,
-.carrossel .lista .item:nth-child(2) .titulo,
-.carrossel .lista .item:nth-child(2) .topico,
-.carrossel .lista .item:nth-child(2) .descricao,
-.carrossel .lista .item:nth-child(2) .buttons {
+.carrossel.prev .lista .item:nth-child(2) .lumini,
+.carrossel.prev .lista .item:nth-child(2) .titulo,
+.carrossel.prev .lista .item:nth-child(2) .topico,
+.carrossel.prev .lista .item:nth-child(2) .descricao,
+.carrossel.prev .lista .item:nth-child(2) .buttons {
     animation: contentOut 1.5s linear 1 forwards;
 }
 
