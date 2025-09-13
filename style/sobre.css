@@ -82,5 +82,22 @@ header img {
 }
 @media screen and (max-width: 768px) {
     header a {
-        margin-right: 20px;
-    }}
+        margin-right: 15px;
+        max-width: 20%;
+    }
+    .sobre h1{
+        font-size: 2rem;
+    }
+    .sobre h2{
+        font-size: 1.5rem;
+    }
+    .sobre p{
+        font-size: 0.9rem;
+    }
+    .sobre ul li{
+        font-size: 0.9rem;
+    }
+    .sobre{
+        padding: 3rem 5%;
+    }
+}
