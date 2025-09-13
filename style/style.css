@@ -109,3 +109,23 @@ header a{
     object-fit: cover;
     
 }
+.thumbnail .item .conteudo{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+}
+.thumbnail .item .conteudo .titulo{
+    font-weight: bold;
+
+}
+
+.setas{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+}
