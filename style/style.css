@@ -179,3 +179,21 @@ header a{
 .carrossel .lista .item:nth-child(1) .buttons{
     animation-delay: 1.8s;
 }
+.carrossel.next .lista .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage {
+    to{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
