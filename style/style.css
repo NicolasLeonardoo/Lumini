@@ -129,3 +129,40 @@ header a{
     display: flex;
     gap: 10px;
 }
+.setas button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #eee4;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.setas button:hover{
+    background-color: #eee;
+    color: #555;
+}
+.carrossel .lista .item:nth-child(1){
+    z-index: 1;
+}
+.carrossel .lista .item:nth-child(1) .lumini,
+.carrossel .lista .item:nth-child(1) .titulo,
+.carrossel .lista .item:nth-child(1) .topico,
+.carrossel .lista .item:nth-child(1) .descricao,
+.carrossel .lista .item:nth-child(1) .buttons{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent {
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
