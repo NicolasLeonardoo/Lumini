@@ -324,3 +324,11 @@ header a {
         width: 0;
     }
 }
+@media screen and (max-width: 678px) {
+    .carrossel .lista .item .conteudo {
+        padding-right: 0;
+    }
+        .carrossel .lista .item .titulo {
+            font-size: 30px;
+
+}}
