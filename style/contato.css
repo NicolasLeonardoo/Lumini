@@ -237,7 +237,7 @@ form header i {
 }
 
 #social_media a:hover {
-    color: rgb(172, 172, 172);
+    color: var(--primary-color);
     transform: translateY(-5px) scale(1.1);
     
 }
@@ -311,28 +311,6 @@ textarea::placeholder {
     font-size: 0.95rem;
 }
 
-select {
-    background: var(--glass-bg-light);
-    border-radius: 16px;
-    padding: 18px 20px;
-    border: 1px solid var(--border);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 20px var(--shadow-glow);
-    background: var(--glass-bg-hover);
-}
-
-select option {
-    background: var(--darker-light-bg);
-    color: var(--text);
-    padding: 10px;
-}
 
 textarea {
     background: var(--glass-bg-light);
@@ -378,8 +356,8 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-        background: rgb(172, 172, 172);
-        color: #161616;
+        background: var(--primary-color);
+        color: #ffffff;
 }
 
 button[type="reset"] {
@@ -391,6 +369,7 @@ button[type="reset"] {
 
 button[type="reset"]:hover {
     background: var(--glass-bg-hover);
+    border: 1px solid var(--primary-color);
 }
 
 button::before {
