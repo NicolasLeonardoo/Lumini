@@ -11,7 +11,11 @@ prevDom.onclick = function () {
     showSlider('prev');
 };
 let timeRunning = 3000;
+let timeAutoNext = 7000;
 let runTimeOut;
+let runAutoRun = setTimeout(() => {
+        nextDom.click();
+}, timeAutoNext);
 function showSlider(type) {
     let itemSlider = document.querySelectorAll('.carrossel .lista .item');
     let itemThumbnail = document.querySelectorAll('.carrossel .thumbnail .item');
@@ -24,10 +28,16 @@ function showSlider(type) {
         let positionLastItem = itemSlider.length - 1;
         listaItemDom.prepend(itemSlider[positionLastItem]);
         thumbnailDom.prepend(itemThumbnail[positionLastItem]);
+        carrosselDom.classList.add('prev');
     }
     clearTimeout(runTimeOut);
     runTimeOut = setTimeout(() => {
         carrosselDom.classList.remove('next');
+        carrosselDom.classList.remove('prev');
 
     }, timeRunning);
+    clearTimeout(runAutoRun);
+    runAutoRun = setTimeout(() => {
+        nextDom.click();
+}, timeAutoNext);
 }
