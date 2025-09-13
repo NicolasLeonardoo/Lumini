@@ -208,3 +208,36 @@ header a{
         width: 150px;
     }
 }
+.carrossel.next .thumbnail{
+    transform: translateX(150px);
+    animation: transformThumbnail .5s linear 1 forwards;
+}
+@keyframes transformThumbnail {
+    to{
+        transform: translateX(0px);
+    }
+}
+.carrossel.prev .lista .item:nth-child(2){
+    z-index: 2;
+}
+.carrossel.prev .lista .item:nth-child(2) img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outImage .5s linear;
+}
+@keyframes outImage {
+    to{
+        width: 150px;
+        height: 220px;
+        left: 50%;
+        bottom: 50px;
+        border-radius: 20px;
+    }
+}
+.carrossel.prev .lista .item:nth-child(1){
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
