@@ -31,6 +31,7 @@ header {
 
 header a {
     margin-right: 40px;
+    font-size: 13px;
 }
 
 header img {
@@ -39,6 +40,7 @@ header img {
     margin-right: 50px;
     margin-top: 8px;
 }
+
 .carrossel {
     width: 100vw;
     height: 100vh;
@@ -103,6 +105,15 @@ header img {
     letter-spacing: 3px;
     font-weight: 500;
     font-family: poppins, sans-serif;
+}
+.carrossel .lista .item .conteudo button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transition: 0.3s;
+}
+.carrossel .lista .item .conteudo button:nth-child(2):hover {
+    transition: 0.3s;
+    border: 1px solid var(--primary-color);
 }
 
 .carrossel .lista .item .conteudo button:nth-child(2) {
