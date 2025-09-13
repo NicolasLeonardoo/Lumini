@@ -1,11 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../style/contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+    <title>Formulario</title>
 </head>
+
 <body>
     
+    <div class="background"><img src="../img/logo1.png" alt="Logo Lumini Segurança Eletrônica" class="logo"></div>
+    <main>
+        <a href="../index.html" class="back-button" title="Voltar para a página anterior">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <form id="formContato">
+            <header>
+                <h1><span class="titulo-span">FORMULARIO DE</span> CONTATO</h1>
+            </header>
+            <section id="social_media">
+                <a href="https://wa.me/5515997917901"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/luminiseguranca/"><i class="fa-brands fa-instagram"></i></a>
+            </section>
+            <section id="inputs">
+                <fieldset class="input-box">
+                    <label for="nome">Nome
+                        <span class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        </span>
+                    </label>
+                </fieldset>
+                <fieldset class="input-box">
+                    <label for="email">Email
+                        <span class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                        </span>
+                    </label>
+                </fieldset>
+                <fieldset class="input-box">
+                    <label for="nome">Telefone
+                        <span class="input-field">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                        </span>
+                    </label>
+                </fieldset>
+
+
+                <fieldset class="input-box">
+                    <label for="mensagem">Mensagem
+                    </label>
+                </fieldset>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."
+                    required></textarea>
+            </section>
+            <footer>
+                <button type="submit">ENVIAR</button>
+                <button type="reset">LIMPAR</button>
+            </footer>
+        </form>
+        <article id="respostaUsuario"></article>
+    </main>
+    <script>
+        const form = document.getElementById('formContato');
+        const resposta = document.getElementById('respostaUsuario');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const assunto = document.getElementById('assunto').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+
+            if (!nome || !email || !telefone || !assunto || !mensagem) {
+                alert('Por favor, preencha todos os campos do formulário.');
+                return;
+            }
+
+            resposta.classList.remove('fade-in');
+            resposta.innerHTML = `
+        <h3>Dados enviados:</h3>                                                           
+        <p><strong>Nome:</strong> ${nome}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Telefone:</strong> ${telefone}</p>
+        <p><strong>Assunto:</strong> ${assunto}</p>
+        <p><strong>Mensagem:</strong> ${mensagem}</p>
+      `;
+
+            setTimeout(() => {
+                resposta.classList.add('fade-in');
+            }, 10);
+            alert('Formulário enviado com sucesso!');
+        });
+    </script>
 </body>
+
 </html>
