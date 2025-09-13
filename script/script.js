@@ -7,6 +7,9 @@ let thumbnailDom = document.querySelector('.carrossel .thumbnail');
 nextDom.onclick = function () {
     showSlider('next');
 }
+prevDom.onclick = function () {
+    showSlider('prev');
+};
 let timeRunning = 3000;
 let runTimeOut;
 function showSlider(type) {
@@ -17,6 +20,10 @@ function showSlider(type) {
         listaItemDom.appendChild(itemSlider[0]);
         thumbnailDom.appendChild(itemThumbnail[0]);
         carrosselDom.classList.add('next');
+    }else{
+        let positionLastItem = itemSlider.length - 1;
+        listaItemDom.prepend(itemSlider[positionLastItem]);
+        thumbnailDom.prepend(itemThumbnail[positionLastItem]);
     }
     clearTimeout(runTimeOut);
     runTimeOut = setTimeout(() => {
