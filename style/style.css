@@ -324,11 +324,89 @@ header a {
         width: 0;
     }
 }
-@media screen and (max-width: 678px) {
-    .carrossel .lista .item .conteudo {
-        padding-right: 0;
-    }
-        .carrossel .lista .item .titulo {
-            font-size: 30px;
 
-}}
+@media screen and (max-width: 768px) {
+    header a {
+        margin-right: 20px; /* Reduz espaçamento no menu */
+    }
+    .carrossel .lista .item .conteudo {
+        top: 15%;
+        padding-right: 0;
+        max-width: 90%;
+    }
+    .carrossel .lista .item .conteudo .titulo,
+    .carrossel .lista .item .conteudo .topico {
+        font-size: clamp(2.5em, 10vw, 3.5em); /* Fonte que se adapta ao tamanho da tela */
+    }
+    .carrossel .lista .item .conteudo .descricao {
+        font-size: 0.9em;
+        max-width: 100%;
+    }
+    .carrossel .lista .item .conteudo .buttons {
+        grid-template-columns: 1fr; /* Um botão por linha */
+        grid-template-rows: repeat(2, 40px);
+        gap: 10px;
+        max-width: 150px;
+    }
+ 
+.carrossel .lista .item:nth-child(1) img {
+    object-position: right center; /* Mostra o lado DIREITO da imagem */
+    filter: brightness(60%);
+}
+
+.carrossel .lista .item:nth-child(2) img {
+    object-position: right center; /* Mostra o lado DIREITO da imagem */
+    filter: brightness(60%);
+}
+
+/* Para o item 3 (Ex: se o produto estiver na esquerda) */
+.carrossel .lista .item:nth-child(3) img {
+    object-position: left center; /* Mostra o lado ESQUERDO da imagem */
+    filter: brightness(60%);
+}
+
+/* Para o item 4 (se o produto estiver no centro) */
+.carrossel .lista .item:nth-child(4) img {
+    object-position: center center; /* Comportamento padrão */
+    filter: brightness(60%);
+}
+
+/* Adicione mais itens conforme necessário... */
+}
+/* Full HD e acima */
+@media screen and (min-width: 1200px) {
+    header {
+        width: 1320px;
+        max-width: 90%;
+    }
+
+    .carrossel .lista .item .conteudo {
+        width: 1320px;
+        max-width: 90%;
+        padding-right: 20%;
+        top: 10%;
+    }
+
+    .carrossel .lista .item .conteudo .titulo,
+    .carrossel .lista .item .conteudo .topico {
+        font-size: clamp(3em, 4vw, 5em);
+        max-width: 60%;
+    }
+
+    .carrossel .lista .item .conteudo .descricao {
+        font-size: 1.1em;
+        max-width: 50%;
+    }
+
+    .setas {
+        top: 85%;
+        right: 50%;
+        width: 400px;
+    }
+
+    .setas button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
