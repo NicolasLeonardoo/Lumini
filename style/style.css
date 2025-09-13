@@ -141,6 +141,7 @@ header a{
     font-family: monospace;
     font-weight: bold;
     transition: 0.5s;
+    z-index: 100;
 }
 .setas button:hover{
     background-color: #eee;
@@ -165,4 +166,16 @@ header a{
         filter: blur(0px);
         opacity: 1;
     }
+}
+.carrossel .lista .item:nth-child(1) .titulo{
+    animation-delay: 1.2s;
+}
+.carrossel .lista .item:nth-child(1) .topico{
+    animation-delay: 1.4s;
+}
+.carrossel .lista .item:nth-child(1) .descricao{
+    animation-delay: 1.6s;
+}
+.carrossel .lista .item:nth-child(1) .buttons{
+    animation-delay: 1.8s;
 }
