@@ -80,6 +80,7 @@ header img {
 .sobre span{
     color: var(--primary-color);
 }
+
 @media screen and (max-width: 768px) {
     header a {
         margin-right: 15px;
