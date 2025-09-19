@@ -31,6 +31,7 @@ header a {
     text-decoration: none;
     color: var(--white-color);
 }
+
 header a:hover {
     color: var(--primary-color);
     transition: 0.3s;
@@ -108,19 +109,23 @@ header img {
     font-weight: 500;
     font-family: poppins, sans-serif;
 }
-.btn1 a{
+
+.btn1 a {
     text-decoration: none;
     color: var(--black);
 }
-.btn2 a{
+
+.btn2 a {
     text-decoration: none;
     color: var(--white-color);
 }
+
 .carrossel .lista .item .conteudo button:hover {
     background-color: var(--primary-color);
     color: var(--white-color);
     transition: 0.3s;
 }
+
 .carrossel .lista .item .conteudo button:nth-child(2):hover {
     transition: 0.3s;
     border: 1px solid var(--primary-color);
@@ -398,48 +403,54 @@ header img {
         filter: brightness(60%);
     }
 
-
     .carrossel .lista .item:nth-child(4) img {
         object-position: center center;
         filter: brightness(60%);
     }
 
-
-}
-
-@media screen and (min-width: 1921px) {
-    header {
-        width: 1320px;
-        max-width: 90%;
+    .carrossel .lista .item:nth-child(5) img {
+        object-position: right center;
+        filter: brightness(60%);
     }
 
-    .carrossel .lista .item .conteudo {
-        width: 1320px;
-        max-width: 90%;
-        padding-right: 20%;
-        top: 10%;
+    .carrossel .lista .item:nth-child(6) img {
+        object-position: right center;
+        filter: brightness(60%);
     }
 
-    .carrossel .lista .item .conteudo .titulo,
-    .carrossel .lista .item .conteudo .topico {
-        font-size: clamp(3em, 4vw, 5em);
-        max-width: 60%;
-    }
+    @media screen and (min-width: 1921px) {
+        header {
+            width: 1320px;
+            max-width: 90%;
+        }
 
-    .carrossel .lista .item .conteudo .descricao {
-        font-size: 1.1em;
-        max-width: 50%;
-    }
+        .carrossel .lista .item .conteudo {
+            width: 1320px;
+            max-width: 90%;
+            padding-right: 20%;
+            top: 10%;
+        }
 
-    .setas {
-        top: 85%;
-        right: 50%;
-        width: 400px;
-    }
+        .carrossel .lista .item .conteudo .titulo,
+        .carrossel .lista .item .conteudo .topico {
+            font-size: clamp(3em, 4vw, 5em);
+            max-width: 60%;
+        }
 
-    .setas button {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-}
+        .carrossel .lista .item .conteudo .descricao {
+            font-size: 1.1em;
+            max-width: 50%;
+        }
+
+        .setas {
+            top: 85%;
+            right: 50%;
+            width: 400px;
+        }
+
+        .setas button {
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+        }
+    }}
