@@ -413,10 +413,6 @@ header img {
         filter: brightness(60%);
     }
 
-    .carrossel .lista .item:nth-child(6) img {
-        object-position: right center;
-        filter: brightness(60%);
-    }
 
     @media screen and (min-width: 1921px) {
         header {
