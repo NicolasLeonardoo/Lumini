@@ -13,10 +13,6 @@ body {
     font-size: 12px;
 }
 
-a {
-    text-decoration: none;
-    color: var(--white-color);
-}
 
 header {
     width: 1140px;
@@ -32,6 +28,8 @@ header {
 header a {
     margin-right: 40px;
     font-size: 13px;
+    text-decoration: none;
+    color: var(--white-color);
 }
 header a:hover {
     color: var(--primary-color);
@@ -109,6 +107,14 @@ header img {
     letter-spacing: 3px;
     font-weight: 500;
     font-family: poppins, sans-serif;
+}
+.btn1 a{
+    text-decoration: none;
+    color: var(--black);
+}
+.btn2 a{
+    text-decoration: none;
+    color: var(--white-color);
 }
 .carrossel .lista .item .conteudo button:hover {
     background-color: var(--primary-color);
